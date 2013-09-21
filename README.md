@@ -25,12 +25,14 @@ bundle exec rake guides:generate  GUIDES_LANGUAGE=zh
 
 
 
-### 问题
+### 问题和建议
 
 有任何问题可以发邮件至 railsguide-zh@googlegroups.com ，或者[提issue][4]
 
 
+###License
 
+与 rails 一样 ，在  [MIT License](http://www.opensource.org/licenses/MIT) 下发布.
 
 
 
