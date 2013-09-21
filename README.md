@@ -8,6 +8,7 @@
 - 翻译你感兴趣的文章
 
 生成预览:
+
 1. cd railsguide-zh/guides
 2. bundle install
 3. bundle exec rake guides:generate  GUIDES_LANGUAGE=zh
