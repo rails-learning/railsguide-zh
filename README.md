@@ -5,8 +5,17 @@
 ###参与翻译
 - fork 这个repo(默认分支是`4-0-stable`)
 - cd railsguide-zh/guides/source/zh
-- 翻译你感兴趣的文章
+- 在 [翻译进度][5] 中加入自己要翻译的文章
+- 开始翻译
 - 发pull-request 回来
+
+
+### 翻译进度
+
+查看 [翻译进度][5]
+
+
+
 
 ###生成预览:
 
@@ -41,3 +50,4 @@ bundle exec rake guides:generate  GUIDES_LANGUAGE=zh
 [2]:http://daringfireball.net/projects/markdown/
 [3]:http://wowubuntu.com/markdown/
 [4]:https://github.com/rails-learning/railsguide-zh/issues
+[5]:https://github.com/rails-learning/railsguide-zh/issues/1
