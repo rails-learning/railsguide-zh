@@ -3,11 +3,11 @@
 这个项目是从 [rails/rails][1] fork 过来，专门做 rails guide 4.0.0 的中文翻译。
 
 ###参与翻译
-- fork 这个repo(默认分支是`4-0-stable`)
+- fork 这个repo (默认分支是`4-0-stable`)
 - cd railsguide-zh/guides/source/zh
 - 在 [翻译进度][5] 中加入自己要翻译的文章
-- 开始翻译
-- 发pull-request 回来
+- 开始翻译
+- 发 pull-request 回来
 
 
 ###翻译注意事项
@@ -40,7 +40,7 @@ bundle exec rake guides:generate  GUIDES_LANGUAGE=zh
 
 ### 问题和建议
 
-有任何问题可以发邮件至 railsguide-zh@googlegroups.com ，或者[提issue][4]
+有任何问题可以发邮件至 railsguide-zh@googlegroups.com ，或者 [提 issue][4]
 
 
 ###License
