@@ -25,7 +25,7 @@
 
 ``` ruby
 cd railsguide-zh/guides
-bundle install
+bundle --withou db
 bundle exec rake guides:generate  GUIDES_LANGUAGE=zh
 ```
 在 `railsguide-zh/guides/output` 下会生成文档.
