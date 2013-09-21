@@ -25,7 +25,9 @@ bundle exec rake guides:generate  GUIDES_LANGUAGE=zh
 
 
 
+### 问题
 
+有任何问题可以发邮件至 railsguide-zh@googlegroups.com ，或者[提issue][4]
 
 
 
@@ -36,3 +38,4 @@ bundle exec rake guides:generate  GUIDES_LANGUAGE=zh
 [1]:https://github.com/rails/rails.git
 [2]:http://daringfireball.net/projects/markdown/
 [3]:http://wowubuntu.com/markdown/
+[4]:https://github.com/rails-learning/railsguide-zh/issues
