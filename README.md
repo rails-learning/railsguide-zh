@@ -10,6 +10,10 @@
 - 发pull-request 回来
 
 
+###翻译注意事项
+
+- [翻译注意事项][6]
+
 ### 翻译进度
 
 查看 [翻译进度][5]
@@ -51,3 +55,4 @@ bundle exec rake guides:generate  GUIDES_LANGUAGE=zh
 [3]:http://wowubuntu.com/markdown/
 [4]:https://github.com/rails-learning/railsguide-zh/issues
 [5]:https://github.com/rails-learning/railsguide-zh/issues/1
+[6]:https://github.com/rails-learning/railsguide-zh/wiki/%E7%BF%BB%E8%AF%91%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9
