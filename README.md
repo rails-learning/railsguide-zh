@@ -1,4 +1,4 @@
-##Welcome to Rails Guide zh
+##欢迎参与 Rails Guide 4.0.0 中文翻译
 
 这个项目是从 [rails/rails][1] fork 过来，专门做 rails guide 4.0.0 的中文翻译。
 
