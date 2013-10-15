@@ -1,24 +1,24 @@
-The Rails Command Line
+Rails 命令行
 ======================
 
-Rails comes with every command line tool you'll need to
+Rails 提供了你需要的每一个命令行工具:
 
-After reading this guide, you will know:
+通过这篇 guide 你将了解:
 
-* How to create a Rails application.
-* How to generate models, controllers, database migrations, and unit tests.
-* How to start a development server.
-* How to experiment with objects through an interactive shell.
+* 如何创建一个 Rails application.
+* 如何生成 models, controllers, database migrations, and unit tests.
+* 如何启动一个开发环境的 server.
+* 如何通过可交互的 shell 与 objects 交互.
 * How to profile and benchmark your new creation.
 
 --------------------------------------------------------------------------------
 
-NOTE: This tutorial assumes you have basic Rails knowledge from reading the [Getting Started with Rails Guide](getting_started.html).
+注意: 这篇 guide 假定你已经读过 [Getting Started with Rails Guide](getting_started.html), 了解了一些 Rails 的基本知识。
 
-Command Line Basics
+Command Line 入门
 -------------------
 
-There are a few commands that are absolutely critical to your everyday usage of Rails. In the order of how much you'll probably use them are:
+这里是一些 Rails 日常应用中非常重要的 commands , 按常用频率排序如下：
 
 * `rails console`
 * `rails server`
@@ -27,13 +27,13 @@ There are a few commands that are absolutely critical to your everyday usage of 
 * `rails dbconsole`
 * `rails new app_name`
 
-Let's create a simple Rails application to step through each of these commands in context.
+让我们通过创建一个简单的 Rails 程序来看看每个 commands 的作用。
 
 ### `rails new`
 
-The first thing we'll want to do is create a new Rails application by running the `rails new` command after installing Rails.
+安装完 Rails 之后的第一件事是运行 `rails new` 来创建一个新的 Rails 应用。
 
-INFO: You can install the rails gem by typing `gem install rails`, if you don't have it already.
+INFO: 如果你还没有安装 Rails ,可以通过 `gem install rails` 来安装 Rails。
 
 ```bash
 $ rails new commandsapp
@@ -50,15 +50,16 @@ $ rails new commandsapp
         run  bundle install
 ```
 
-Rails will set you up with what seems like a huge amount of stuff for such a tiny command! You've got the entire Rails directory structure now with all the code you need to run our simple application right out of the box.
+通过这么一个简单的命令， Rails 为你创建一大堆的东西。你已经得到了整个Rails的目录结构，里面包含了你运行我们的示例程序所有的代码。
 
 ### `rails server`
 
-The `rails server` command launches a small web server named WEBrick which comes bundled with Ruby. You'll use this any time you want to access your application through a web browser.
+`rails server` (`rails s`) 命令会启动一个名叫 WEBrick 的 web 服务器。运行这个命令之后，你就可以通过浏览器来访问你的应用了。
 
 INFO: WEBrick isn't your only option for serving Rails. We'll get to that [later](#server-with-different-backends).
 
-With no further work, `rails server` will run our new shiny Rails app:
+
+不需要任何额外的工作, `rails server` 就可以运行我们新的闪亮的 Rails 应用 :-) :
 
 ```bash
 $ cd commandsapp
