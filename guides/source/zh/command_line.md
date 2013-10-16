@@ -73,23 +73,26 @@ $ rails server
 [2012-05-28 00:39:41] INFO  WEBrick::HTTPServer#start: pid=69680 port=3000
 ```
 
-With just three commands we whipped up a Rails server listening on port 3000. Go to your browser and open [http://localhost:3000](http://localhost:3000), you will see a basic Rails app running.
+仅用了三个命令，我们就启动了 Rails server 监听 3000 端口。启动你的浏览器打开 [http://localhost:3000](http://localhost:3000)， 你就可以看到一个基本的 Rails 应用运行。
 
-INFO: You can also use the alias "s" to start the server: `rails s`.
+INFO：你也可以使用 `rails s` 来启动服务器。
 
-The server can be run on a different port using the `-p` option. The default development environment can be changed using `-e`.
+
+使用 `-p` 选项可以为服务器指定特定的监听端口(默认是3000)。`-e` 选项可以改变默认的配置的开发环境。
 
 ```bash
 $ rails server -e production -p 4000
 ```
 
-The `-b` option binds Rails to the specified IP, by default it is 0.0.0.0. You can run a server as a daemon by passing a `-d` option.
+`-b` 选项绑定 Rails 到特定的 IP, 默认是 0.0.0.0。`-d` 选项可以将 server 作为一个 daemon 启动。
 
 ### `rails generate`
 
-The `rails generate` command uses templates to create a whole lot of things. Running `rails generate` by itself gives a list of available generators:
+`rails generate` 命令会使用模板创建一大堆东西。运行 `rails generate` 会给出一系列可用的
+generators:
 
-INFO: You can also use the alias "g" to invoke the generator command: `rails g`.
+
+INFO: 你可以用 "g" 作为 "generator" 的简写来运行 generator 命令: `rails g`
 
 ```bash
 $ rails generate
@@ -108,13 +111,14 @@ Rails:
   ...
 ```
 
-NOTE: You can install more generators through generator gems, portions of plugins you'll undoubtedly install, and you can even create your own!
+NOTE: 你可以通过 generator gems 安装更多的 generators， 有些 generators 插件你可能会安装，
+但是，你也可以创建你自己的哦~
 
-Using generators will save you a large amount of time by writing **boilerplate code**, code that is necessary for the app to work.
+使用 generators 可以帮助你省下大量写 **模板代码** 的时间，那些为了保证你的程序可以运行的代码。
 
-Let's make our own controller with the controller generator. But what command should we use? Let's ask the generator:
+我们来使用 controller generator 来创建自己的 controller。该用什么命令呢？让我们来问一下 generator：
 
-INFO: All Rails console utilities have help text. As with most *nix utilities, you can try adding `--help` or `-h` to the end, for example `rails server --help`.
+INFO：所有的 Rails 控制台工具都包含帮助文档。像大多数 *NIX 工具一样，你可以添加 `--help` 或者 `-h` 来查看帮助，例如 `rails server --help`。
 
 ```bash
 $ rails generate controller
@@ -141,7 +145,7 @@ Example:
         Helper:     app/helpers/credit_card_helper.rb
 ```
 
-The controller generator is expecting parameters in the form of `generate controller ControllerName action1 action2`. Let's make a `Greetings` controller with an action of **hello**, which will say something nice to us.
+controller generator 期待我们以 `generator controller ControllerName action1 action2` 格式来传递参数。我们来创建一个带有 **hello** action 的 `Greetings` controller, 用来输出一些问候语。 
 
 ```bash
 $ rails generate controller Greetings hello
