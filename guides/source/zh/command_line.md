@@ -5,11 +5,11 @@ Rails 提供了你需要的每一个命令行工具:
 
 通过这篇 guide 你将了解:
 
-* 如何创建一个 Rails application.
+* 如何创建一个 Rails 应用.
 * 如何生成 models, controllers, database migrations, and unit tests.
 * 如何启动一个开发环境的 server.
-* 如何通过可交互的 shell 与 objects 交互.
-* How to profile and benchmark your new creation.
+* 如何通过可交互的 shell 与 objects 交互。
+* 如何配置你新创建的应用。
 
 --------------------------------------------------------------------------------
 
@@ -111,8 +111,7 @@ Rails:
   ...
 ```
 
-NOTE: 你可以通过 generator gems 安装更多的 generators， 有些 generators 插件你可能会安装，
-但是，你也可以创建你自己的哦~
+NOTE: 你可以通过 generator gems 安装更多的 generators， 有些 generators 插件你可能会安装，但是，你也可以创建你自己的哦~
 
 使用 generators 可以帮助你省下大量写 **模板代码** 的时间，那些为了保证你的程序可以运行的代码。
 
@@ -167,9 +166,9 @@ $ rails generate controller Greetings hello
      create      app/assets/stylesheets/greetings.css.scss
 ```
 
-What all did this generate? It made sure a bunch of directories were in our application, and created a controller file, a view file, a functional test file, a helper for the view, a JavaScript file and a stylesheet file.
+这个命令生成了什么？它在应用程序下生成了一系列的目录，创建了一个 controller 文件,一个 view 文件, 一个 functional test 文件，一个 和 view 相关的 helper ，一个 JavaScript 文件和一个 stylesheet 文件。
 
-Check out the controller and modify it a little (in `app/controllers/greetings_controller.rb`):
+打开 controller 进行如下修改： ( 在`app/controllers/greetings_controller.rb`）
 
 ```ruby
 class GreetingsController < ApplicationController
@@ -179,25 +178,25 @@ class GreetingsController < ApplicationController
 end
 ```
 
-Then the view, to display our message (in `app/views/greetings/hello.html.erb`):
+修改 view , 显示这条 message  (in `app/views/greetings/hello.html.erb`):
 
 ```erb
 <h1>A Greeting for You!</h1>
 <p><%= @message %></p>
 ```
 
-Fire up your server using `rails server`.
+执行 `rails server` 来启动你的 Server 。
 
 ```bash
 $ rails server
 => Booting WEBrick...
 ```
 
-The URL will be [http://localhost:3000/greetings/hello](http://localhost:3000/greetings/hello).
+URL 在 [http://localhost:3000/greetings/hello](http://localhost:3000/greetings/hello)。
 
-INFO: With a normal, plain-old Rails application, your URLs will generally follow the pattern of http://(host)/(controller)/(action), and a URL like http://(host)/(controller) will hit the **index** action of that controller.
+INFO：在一个正常的，原生的 Rails 应用中，你的 URL 会符合这种模式 http://(host)/(controller)/(action),http://(host)/(controller) 这个 URL 会被对应到 **index** 这个 action。
 
-Rails comes with a generator for data models too.
+Rails 同样包含了 data modes 的 generator。
 
 ```bash
 $ rails generate model
