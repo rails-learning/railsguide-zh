@@ -215,11 +215,12 @@ Description:
     Create rails files for model generator.
 ```
 
-NOTE: For a list of available field types, refer to the [API documentation](http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/TableDefinition.html#method-i-column) for the column method for the `TableDefinition` class.
+NOTE: 关于可用的 field types 列表， 请参考 [API documentation](http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/TableDefinition.html#method-i-column) `TableDefinition` 的 column 方法。
 
-But instead of generating a model directly (which we'll be doing later), let's set up a scaffold. A **scaffold** in Rails is a full set of model, database migration for that model, controller to manipulate it, views to view and manipulate the data, and a test suite for each of the above.
 
-We will set up a simple resource called "HighScore" that will keep track of our highest score on video games we play.
+我们可以创建一个 scaffold ，而不是直接生成一个 model (后面会做)。Rails 中，一个 **scaffold** 是一个包含了 model, database migration , controller ,views 以及 test suite 的集合。
+
+我们来创建一个叫做 "HighScore" 的简单 resource, 用来记录我们玩游戏的最高分数。
 
 ```bash
 $ rails generate scaffold HighScore game:string score:integer
@@ -255,9 +256,14 @@ $ rails generate scaffold HighScore game:string score:integer
     create    app/assets/stylesheets/scaffolds.css.scss
 ```
 
-The generator checks that there exist the directories for models, controllers, helpers, layouts, functional and unit tests, stylesheets, creates the views, controller, model and database migration for HighScore (creating the `high_scores` table and fields), takes care of the route for the **resource**, and new tests for everything.
+这个 generator 会检查目录下的 models,controllers,helpers,layouts,functional and unit tests, stylesheets, 为 HighScore 创建 views, controllers, mode 和 database migration（创建 `high_scores` table and fields)。创建 **resource** 的 route 以及为一切新创建的东西添加新的测试。
 
+<!--
 The migration requires that we **migrate**, that is, run some Ruby code (living in that `20120528060026_create_high_scores.rb`) to modify the schema of our database. Which database? The sqlite3 database that Rails will create for you when we run the `rake db:migrate` command. We'll talk more about Rake in-depth in a little while.
+-->
+
+migration 过程需要我们执行 **migrate** ， 即运行一些 Ruby 代码 （ 在 `20120528060026_create_high_scores.rb` 里面) 来修改我们数据库的 schema。 什么数据库？
+当我们运行 `rake db:migrate` 命令的时候 Rails 会帮我们创建 sqlite3 数据库。我们将在 后面的 Rake in-depth 更多介绍。
 
 ```bash
 $ rake db:migrate
@@ -267,21 +273,41 @@ $ rake db:migrate
 ==  CreateHighScores: migrated (0.0019s) ======================================
 ```
 
+<!--
 INFO: Let's talk about unit tests. Unit tests are code that tests and makes assertions about code. In unit testing, we take a little part of code, say a method of a model, and test its inputs and outputs. Unit tests are your friend. The sooner you make peace with the fact that your quality of life will drastically increase when you unit test your code, the better. Seriously. We'll make one in a moment.
+-->
 
+INFO：来聊聊 unit tests 吧。Unit tests 是为我们业务逻辑代码编写的一些 tests 和 assertions 。在 uint test 中，我们用一小段代码，调用 model 中的一个方法，测试它的输入和输出。 Unit tests 是你的朋友。对你的代码进行单元测试可以大大增强你代码的质量，越早认识到这个事实，对你越有好处。的确如此。很快我们就会写一个例子。
+
+<!--
 Let's see the interface Rails created for us.
+-->
+
+让我们来看看 Rails 给我们创建的接口。
 
 ```bash
 $ rails server
 ```
 
+<!--
 Go to your browser and open [http://localhost:3000/high_scores](http://localhost:3000/high_scores), now we can create new high scores (55,160 on Space Invaders!)
+-->
+
+启动你的浏览器，打开 [http://localhost:3000/high_scores](http://localhost:3000/high_scores) ， 现在我们就可以创建新的 high scores 了（在 Space Invaders 上创建 50, 160）
 
 ### `rails console`
 
+<!--
 The `console` command lets you interact with your Rails application from the command line. On the underside, `rails console` uses IRB, so if you've ever used it, you'll be right at home. This is useful for testing out quick ideas with code and changing data server-side without touching the website.
+-->
 
+`console` 命令让我们可以用 command line 来和 Rails application 交互。`rails console`使用 IRB，所以，如果你曾经用过，那就太好啦。借助这个工具我们可以在不去修改 website 的情况下修改 server 端的数据,快速测试我们新的想法，。
+
+<!--
 INFO: You can also use the alias "c" to invoke the console: `rails c`.
+-->
+
+INFO: 你可以使用简写 "c" 来启动 console： `rails c`。
 
 You can specify the environment in which the `console` command should operate.
 
