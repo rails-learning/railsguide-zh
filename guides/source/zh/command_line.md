@@ -309,13 +309,20 @@ INFO: You can also use the alias "c" to invoke the console: `rails c`.
 
 INFO: 你可以使用简写 "c" 来启动 console： `rails c`。
 
+<!--
 You can specify the environment in which the `console` command should operate.
+-->
+
+你可以配置 `console` command 的环境。
 
 ```bash
 $ rails console staging
 ```
 
+<!--
 If you wish to test out some code without changing any data, you can do that by invoking `rails console --sandbox`.
+-->
+如果你想测试一些代码而不想任何数据收到影响，可以使用 `rails console --sandbox`。
 
 ```bash
 $ rails console --sandbox
@@ -325,22 +332,40 @@ irb(main):001:0>
 ```
 
 ### `rails dbconsole`
-
+<!--
 `rails dbconsole` figures out which database you're using and drops you into whichever command line interface you would use with it (and figures out the command line parameters to give to it, too!). It supports MySQL, PostgreSQL, SQLite and SQLite3.
+-->
 
+`rails dbconsole` 能查找出当前使用的是那种 database ，并且启动与之交互的命令行（并带有合适的参数!)。支持 MySQL, PostgreSQL, SQLite 和 SQLite3。
+
+<!--
 INFO: You can also use the alias "db" to invoke the dbconsole: `rails db`.
+-->
+
+INFO: 可以用简写 "db" 来启动 dbconsole: `rails db`。
 
 ### `rails runner`
 
+<!--
 `runner` runs Ruby code in the context of Rails non-interactively. For instance:
+-->
+`runner` 在非交互的 Rails 环境下运行一些 Ruby 代码。 例如：
 
 ```bash
 $ rails runner "Model.long_running_method"
 ```
 
+<!--
 INFO: You can also use the alias "r" to invoke the runner: `rails r`.
+-->
 
+INFO: 可以使用简写 "r" 来启动 runner: `rails r`。
+
+<!--
 You can specify the environment in which the `runner` command should operate using the `-e` switch.
+-->
+
+你可以使用 `-e` option 来指定 `runner` command 运行的环境。
 
 ```bash
 $ rails runner -e staging "Model.long_running_method"
@@ -348,9 +373,17 @@ $ rails runner -e staging "Model.long_running_method"
 
 ### `rails destroy`
 
+<!--
 Think of `destroy` as the opposite of `generate`. It'll figure out what generate did, and undo it.
+-->
 
+`destory` 是 `generate` 的逆操作。它会计算出 generate 做了哪些，然后 undo it。
+
+<!--
 INFO: You can also use the alias "d" to invoke the destroy command: `rails d`.
+-->
+
+INFO: 你可以使用简写 "d" 来启动 destroy command： `rails d`。
 
 ```bash
 $ rails generate model Oops
@@ -374,9 +407,17 @@ $ rails destroy model Oops
 Rake
 ----
 
+<!--
 Rake is Ruby Make, a standalone Ruby utility that replaces the Unix utility 'make', and uses a 'Rakefile' and `.rake` files to build up a list of tasks. In Rails, Rake is used for common administration tasks, especially sophisticated ones that build off of each other.
+-->
 
+Rake 是 Ruby Make, 一个用来替代吗 Unix 工具 'make' 的独立 Ruby 工具， 使用 `Rakefile` 和 `.rake` 文件来完成一系列的任务。在 Rails 中，Rake 用来完成一些常见的管理任务，尤其是一些互相依赖的复杂任务。
+
+<!--
 You can get a list of Rake tasks available to you, which will often depend on your current directory, by typing `rake --tasks`. Each task has a description, and should help you find the thing you need.
+-->
+
+输入 `rake --tasks` 你就可以获取当前可用的的 Rake 任务列表，当然，这取决于你当前的环境。每个任务都有一个描述，可以帮助你找到你需要的东西。
 
 ```bash
 $ rake --tasks
@@ -394,7 +435,11 @@ rake tmp:create         # Creates tmp directories for sessions, cache, sockets, 
 
 ### `about`
 
+<!--
 `rake about` gives information about version numbers for Ruby, RubyGems, Rails, the Rails subcomponents, your application's folder, the current Rails environment name, your app's database adapter, and schema version. It is useful when you need to ask for help, check if a security patch might affect you, or when you need some stats for an existing Rails installation.
+-->
+
+`rake about` 会给出当前工具的版本信息，包括： Ruby, RubyGems， Rails，Rails 的子模块，你的应用车程序文件夹，当前 Rails 环境的名称，database ，schema。 这些信息是非常有用的，比如： 当你要查看一个安全性的 Patch 是否会影响到你，或者你需要当前安装的 Rails 的一些统计信息。
 
 ```bash
 $ rake about
