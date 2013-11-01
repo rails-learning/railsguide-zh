@@ -519,7 +519,11 @@ app/models/school.rb:
   * [ 17] [FIXME]
 ```
 
+<!--
 If you are looking for a specific annotation, say FIXME, you can use `rake notes:fixme`. Note that you have to lower case the annotation's name.
+-->
+
+如果你要查找一个特定的 annotation, 如 FIXME , 你可以用 `rake notes:fixme`.注意 annotaion 名字要小写。
 
 ```bash
 $ rake notes:fixme
@@ -530,8 +534,11 @@ app/controllers/admin/users_controller.rb:
 app/models/school.rb:
   * [ 17]
 ```
-
+<!--
 You can also use custom annotations in your code and list them using `rake notes:custom` by specifying the annotation using an environment variable `ANNOTATION`.
+-->
+
+你也可以在代码中使用自定义的 annotations , 使用 `rake notes:custom` 并且给定环境变量  `ANNOTATION` 一个指定的值。
 
 ```bash
 $ rake notes:custom ANNOTATION=BUG
@@ -540,7 +547,12 @@ app/models/post.rb:
   * [ 23] Have to fix this one before pushing!
 ```
 
+<!--
 NOTE. When using specific annotations and custom annotations, the annotation name (FIXME, BUG etc) is not displayed in the output lines.
+-->
+
+注意: 当你使用特定的 specific annotation 和 自定义的 annotation 的时候，annotation 的名字 （FIXME,BUG 等)是不会再输出中显示的。
+
 
 By default, `rake notes` will look in the `app`, `config`, `lib`, `bin` and `test` directories. If you would like to search other directories, you can provide them as a comma separated list in an environment variable `SOURCE_ANNOTATION_DIRECTORIES`.
 
