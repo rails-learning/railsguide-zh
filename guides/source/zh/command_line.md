@@ -462,25 +462,50 @@ Database schema version   20110805173523
 
 ### `assets`
 
+<!--
 You can precompile the assets in `app/assets` using `rake assets:precompile` and remove those compiled assets using `rake assets:clean`.
+-->
+
+你可以使用 `rake assets:precompile` 预编译 `app/assets` 下的 assets , 使用 `rake assets:clean` 删除预编译的 assets.
 
 ### `db`
 
+<!--
 The most common tasks of the `db:` Rake namespace are `migrate` and `create`, and it will pay off to try out all of the migration rake tasks (`up`, `down`, `redo`, `reset`). `rake db:version` is useful when troubleshooting, telling you the current version of the database.
+-->
 
+Rake namespace  `db:` 最常用的 task 是： `migrate` 和 `create`,这两个命令可以使你从其他的 task (`up`, `down`, `redo`,`reset`) 中解放出来。 调试问题的时候，`rake db:version` 是一个有用的命令，它可以告诉你数据库的当前版本。
+
+<!--
 More information about migrations can be found in the [Migrations](migrations.html) guide.
+-->
+
+关于 migrations 更多的信息，查看 [Migrations](migrations.html)
 
 ### `doc`
-
+<!--
 The `doc:` namespace has the tools to generate documentation for your app, API documentation, guides. Documentation can also be stripped which is mainly useful for slimming your codebase, like if you're writing a Rails application for an embedded platform.
+-->
 
+`doc:` 包含了为你的应用 app, api, guides 生成文档的工具。同样也可以帮助你将文档从代码中剥离，当你为嵌入式平台编写 Rails 应用的时候，这种方式可以帮助你精简代码。
+
+<!--
 * `rake doc:app` generates documentation for your application in `doc/app`.
 * `rake doc:guides` generates Rails guides in `doc/guides`.
 * `rake doc:rails` generates API documentation for Rails in `doc/api`.
+-->
+
+* `rake doc:app` 在 `doc/app` 生成你应用程序的文档。
+* `rake doc:guides` 在 `doc/guides` 下生成 guides。
+* `rake doc:rails` 在 `doc/api` 下生成 api 文档。
 
 ### `notes`
 
+<!--
 `rake notes` will search through your code for comments beginning with FIXME, OPTIMIZE or TODO. The search is done in files with extension `.builder`, `.rb`, `.erb`, `.haml` and `.slim` for both default and custom annotations.
+-->
+
+`rake notes` 可以帮助你查找代码中以 FIXME, OPTIMIZE 和 TODO 开头的 comments。查找会在在扩展名是 `.builder`,`.rb`,`.erb.`,`.haml` 和 `.slim` 的文件中进行。
 
 ```bash
 $ rake notes
