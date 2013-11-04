@@ -553,8 +553,11 @@ NOTE. When using specific annotations and custom annotations, the annotation nam
 
 注意: 当你使用特定的 specific annotation 和 自定义的 annotation 的时候，annotation 的名字 （FIXME,BUG 等)是不会再输出中显示的。
 
-
+<!--
 By default, `rake notes` will look in the `app`, `config`, `lib`, `bin` and `test` directories. If you would like to search other directories, you can provide them as a comma separated list in an environment variable `SOURCE_ANNOTATION_DIRECTORIES`.
+-->
+
+`rake notes` 默认会在 `app`, `config`, `lib`,`bin`,`test` 目录下查找。如果想加入其他目录，可以传入在环境变量 `SOURCE_ANNOTATION_DIRECTORIES` 中， 以逗号分隔。
 
 ```bash
 $ export SOURCE_ANNOTATION_DIRECTORIES='spec,vendor'
@@ -568,19 +571,39 @@ spec/models/user_spec.rb:
 
 ### `routes`
 
+<!--
 `rake routes` will list all of your defined routes, which is useful for tracking down routing problems in your app, or giving you a good overview of the URLs in an app you're trying to get familiar with.
+-->
+
+`rake routes` 可以列出所有的 routes, 这对于你跟踪 app 的 routing 问题是很有帮助的，也可以给你呈现一个所有 URLs 的概览。
 
 ### `test`
 
+<!--
 INFO: A good description of unit testing in Rails is given in [A Guide to Testing Rails Applications](testing.html)
+-->
 
+INFO: 关于 unit testing in Rails 的介绍请参考 [A Guide to Testing Rails Applications](testing.html)
+
+<!--
 Rails comes with a test suite called `Test::Unit`. Rails owes its stability to the use of tests. The tasks available in the `test:` namespace helps in running the different tests you will hopefully write.
+-->
+
+Rails 自带了一个 `Test::Unit` 的测试组件。Rails 自身拥有测试的能力。`test:` 下的 tasks 可以帮助你运行各种不同的 tests。 
 
 ### `tmp`
 
+<!--
 The `Rails.root/tmp` directory is, like the *nix /tmp directory, the holding place for temporary files like sessions (if you're using a file store for files), process id files, and cached actions.
+-->
 
+`Rails.root/tmp` 目录，和 *nix/tmp 目录一样，保存一些临时文件，如： sesions，进程 id 或者 cached actions。
+
+<!--
 The `tmp:` namespaced tasks will help you clear the `Rails.root/tmp` directory:
+-->
+
+`tmp:` 下的 tasks 可以帮助你清除 `Rails.root/tmp` 目录:
 
 * `rake tmp:cache:clear` clears `tmp/cache`.
 * `rake tmp:sessions:clear` clears `tmp/sessions`.
@@ -589,13 +612,24 @@ The `tmp:` namespaced tasks will help you clear the `Rails.root/tmp` directory:
 
 ### Miscellaneous
 
+<!--
 * `rake stats` is great for looking at statistics on your code, displaying things like KLOCs (thousands of lines of code) and your code to test ratio.
 * `rake secret` will give you a pseudo-random key to use for your session secret.
 * `rake time:zones:all` lists all the timezones Rails knows about.
+-->
+
+* `rake stats` 是一个显示你代码统计信息的工具，显示类似 KLOCs(千行代码）和你的测试代码比率。
+* `rake secret` 会产生一个随机的密钥作为你的会话密钥。
+* `rake time:zones:all` 将列出 Rails 知道的所有的时区信息。
+
 
 ### Custom Rake Tasks
 
+<!--
 Custom rake tasks have a `.rake` extension and are placed in `Rails.root/lib/tasks`.
+-->
+
+自定义的 rake tasks 有一个 `.rake` 的扩展名，并且要放置在 `Rails.root/lib/tasks` 目录下。
 
 ```ruby
 desc "I am short, but comprehensive description for my cool task"
